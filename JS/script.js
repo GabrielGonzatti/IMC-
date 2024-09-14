@@ -20,12 +20,19 @@ const data = [
         max: 29.9,
         classification: "Entre 25 e 29,9",
         info: "Sobrepeso",
-        obesity: "I",
+        obesity: "0",
     },
     {
         min: 30,
-        max: 39.9,
+        max: 34.9,
         classification: "Entre 30 e 34,9",
+        info: "Obesidade",
+        obesity: "I",
+    },   
+    {
+        min: 35,
+        max: 39.9,
+        classification: "Entre 35 e 39,9",
         info: "Obesidade",
         obesity: "II",
     },   
@@ -85,7 +92,7 @@ function validDigital(text){
 }
 
 function Calcimc(heigth, weight){
-    const imc = weight / (heigth * heigth).toFixed(2);
+    const imc = weight / (heigth * heigth).toFixed(1);
     return imc;
 }
 
